@@ -1,10 +1,13 @@
 import './App.css'
+import AppHeader from './components/AppHeader/AppHeader'
+import Dashboard from './pages/Dashboard/Dashboard'
 
 function App() {
 
   return (
     <>
-      <h1>Booking system</h1>
+      <AppHeader/>
+      <Dashboard/>
     </>
   )
 }
