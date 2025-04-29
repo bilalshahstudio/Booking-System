@@ -93,3 +93,17 @@ p {
   width: 578px;
   size: 24px;
 }
+
+.booking-form{
+  margin-block: 50px;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px;
+  /* @media (max-width: 600px) {
+    flex-direction: column;
+    margin-block: 20px;
+    padding: 20px;
+    width: 70%;
+  } */
+}
