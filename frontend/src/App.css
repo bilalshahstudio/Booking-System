@@ -1,0 +1,137 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+  font-family: 'Poppins', sans-serif;
+  /* padding-inline: 2rem; */
+}
+/* 
+body {
+  font-family: 'Poppins', sans-serif;
+} */
+
+.ant-btn {
+  padding-block: 24px;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.explore-btn{
+  color: #fff;
+  background-color: #F16B51;
+  border-color: #F16B51;
+}
+
+.explore-btn:hover{
+  color: #fff;
+  background-color: #84ce64;
+}
+
+.app-header {
+  position: fixed;
+  padding-top: 14px;
+  padding-inline: 30px;
+  width: 95%;
+  /* padding-inline: 30px; */
+  z-index: 10;
+  background: transparent;
+}
+
+.ant-btn {
+  /* color: #ffff; */
+  /* background-color: #F16B51; */
+  width: 155px;
+  .ant-btn-variant-link {
+    color: #0000;
+  }
+}
+
+.image-layout-container {
+  max-width: 463px;
+  margin-top: 63px;
+  padding: 16px;
+}
+
+.image-row {
+  height: 500px;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.tall-image {
+  height: 80%;
+}
+
+.short-image {
+  height: calc(40% - 8px); /* 8px to account for gutter spacing */
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  width: 578px;
+  size: 24px;
+}
+
+.booking-form {
+  margin-block: 50px;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px;
+  /* @media (max-width: 600px) {
+    flex-direction: column;
+    margin-block: 20px;
+    padding: 20px;
+    width: 70%;
+  } */
+}
+
+.hero {
+  background-image: url("./assets/4.png");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  padding-top: 60px;
+  padding-inline: 2rem;
+}
+
+.overlay {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* color: white; */
+  position: absolute;
+  bottom: -64px;
+  left: 33.33%;
+  box-shadow: 0 4px 20px 1px;
+  /* inset: 0; */
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* width: 1000px; */
+}
+
+.ant-select-single {
+  border: #d9d9d9 !important;
+  /* box-shadow: none !important; */
+}
