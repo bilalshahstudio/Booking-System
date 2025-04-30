@@ -1,31 +1,41 @@
 import React from "react";
 import "../../App.css";
 import { Button, Flex, Typography } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function AppHeader() {
+  const navigate = useNavigate();
   return (
-    <Flex align="center" justify="space-between">
-      <Flex>
-        <Link to="/"><Typography.Text strong>TourBay</Typography.Text></Link>
-      </Flex>
-      <Flex gap={40}>
-        
+    <Flex wrap align="center" justify="space-between" className="app-header">
+      <div>
+        <Link to="/">
+          <Typography.Title level={4}>
+            {" "}
+            <span style={{ color: "#F16B51" }}>Tour</span>
+            <span style={{ color: "black" }}>bay</span>
+          </Typography.Title>
+        </Link>
+      </div>
+      <Flex gap={40} wrap>
         <Link to="/allTours">
-          <Typography.Text strong>Tours</Typography.Text>
+          <Typography.Title level={4}>Tours</Typography.Title>
         </Link>
         <Link to="/bookTour">
-          <Typography.Text strong>Book Tour</Typography.Text>
+          <Typography.Title level={4}>Book Tour</Typography.Title>
         </Link>
         <Link to="/myTours">
-          <Typography.Text strong>My Tours</Typography.Text>
+          <Typography.Title level={4}>My Tours</Typography.Title>
         </Link>
       </Flex>
-      <Flex>
-        <Button style={{ color: "#fffff", backgroundColor: "#F16B51" }}>
+      <div>
+        <Button
+          className="explore-btn"
+          onClick={() => navigate("/landingPage2")}
+          //  style={{ color: "#fffff", backgroundColor: "#F16B51" }}
+        >
           Explore Now
         </Button>
-      </Flex>
+      </div>
     </Flex>
   );
 }
