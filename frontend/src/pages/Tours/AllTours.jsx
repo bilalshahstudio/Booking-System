@@ -1,3 +1,4 @@
+
 import { Button, Card, Flex, Typography } from 'antd'
 import React from 'react'
 import CitiesCard from '../../components/CitiesCard/CitiesCard';
@@ -15,6 +16,9 @@ function AllTours() {
 <CitiesCard/>
 </Flex>
       </Flex>
+
+
+
   )
 }
 

@@ -20,8 +20,11 @@ function BookTour() {
     </Form.Item>
   );
   return (
+
     <Flex align="center" justify="center" style={{width:"100%", paddingTop:"64px"}}>
       <Flex className="booking-form" style={{width:"20%"}}>
+
+    
         <Form
           name="booking"
           labelCol={{
@@ -91,7 +94,9 @@ function BookTour() {
             </Select>
           </Form.Item>
           <Form.Item>
-            <Button block htmlType="submit" >
+
+            <Button block htmlType="submit">
+
               Confirm
             </Button>
           </Form.Item>
