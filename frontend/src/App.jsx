@@ -19,31 +19,45 @@ const Miami = lazy(() => import("./pages/Cities/Miami"));
 const Chicago = lazy(() => import("./pages/Cities/Chicago"));
 const Dallas = lazy(() => import("./pages/Cities/Dallas"));
 const Ankara = lazy(() => import("./pages/Cities/Ankara"));
+const Museum = lazy(() => import("./pages/MiamiPlaces/Museum"));
+const Park = lazy(() => import("./pages/MiamiPlaces/Park"));
+const Skyviews = lazy(() => import("./pages/MiamiPlaces/Skyviews"));
+const Stadium = lazy(() => import("./pages/MiamiPlaces/Stadium"));
+const Tower = lazy(() => import("./pages/MiamiPlaces/Tower"));
+const Wharf = lazy(() => import("./pages/MiamiPlaces/Wharf"));
 
 function App() {
   return (
-    <ConfigProvider theme={{
-      token: {
-        fontFamily: 'Poppins, sans-serif',
-      },
-    }}>
+    <ConfigProvider
+      theme={{
+        token: {
+          fontFamily: "Poppins, sans-serif",
+        },
+      }}
+    >
       <Router>
-      <AppHeader />
-     <Routes>
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        <Route path="/landingPage2" element={<LandingPage2 />} />
-        <Route path="/" element={<LandingPage1 />} />
-        <Route path="/allTours" element={<AllTours />} />
-        <Route path="/bookTour" element={<BookTour />} />
-        <Route path="/myTours" element={<MyTours />} />
-        <Route path="/Istanbul" element={<Istanbul />} />
-        <Route path="/Dubai" element={<Dubai />} />
-        <Route path="/Miami" element={<Miami />} />
-        <Route path="/Chicago" element={<Chicago />} />
-        <Route path="/Dallas" element={<Dallas />} />
-        <Route path="/Ankara" element={<Ankara />} />
-      </Routes>
-    </Router>
+        <AppHeader />
+        <Routes>
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+          <Route path="/landingPage2" element={<LandingPage2 />} />
+          <Route path="/" element={<LandingPage1 />} />
+          <Route path="/allTours" element={<AllTours />} />
+          <Route path="/bookTour" element={<BookTour />} />
+          <Route path="/myTours" element={<MyTours />} />
+          <Route path="/Istanbul" element={<Istanbul />} />
+          <Route path="/Dubai" element={<Dubai />} />
+          <Route path="/Miami" element={<Miami />} />
+          <Route path="/Chicago" element={<Chicago />} />
+          <Route path="/Dallas" element={<Dallas />} />
+          <Route path="/Ankara" element={<Ankara />} />
+          <Route path="/Museum" element={<Museum />} />
+          <Route path="/Park" element={<Park />} />
+          <Route path="/Skyviews" element={<Skyviews />} />
+          <Route path="/Stadium" element={<Stadium />} />
+          <Route path="/Tower" element={<Tower />} />
+          <Route path="/Wharf" element={<Wharf />} />
+        </Routes>
+      </Router>
     </ConfigProvider>
   );
 }
