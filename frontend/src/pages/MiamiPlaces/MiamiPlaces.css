@@ -1,0 +1,64 @@
+.miami-places-container {
+  padding-inline: 33px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tall-image img {
+  object-fit: cover;
+  width: 650px;
+  height: 354px;
+  border-radius: 12px;
+}
+
+.column img:not(.tall-image img) {
+  width: 335px;
+  height: 167px;
+  display: block;
+  border-radius: 12px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.item-title {
+  width: 200px;
+  font-weight: bold;
+}
+
+.item-detail {
+  flex: 1;
+}
+
+.facilities-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 16px;
+}
+
+.facilities-grid li {
+  display: flex;
+  align-items: flex-start;
+}
