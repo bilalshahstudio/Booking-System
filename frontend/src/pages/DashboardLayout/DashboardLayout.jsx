@@ -16,6 +16,7 @@ function DashboardLayout() {
           width: "100%",
           zIndex: 10,
           background: isLandingPage2 ? "transparent" : "#fff",
+          flexWrap: "wrap",
         }}
       >
         <AppHeader />

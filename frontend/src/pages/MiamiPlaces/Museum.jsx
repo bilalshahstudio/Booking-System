@@ -17,6 +17,7 @@ import Perez2 from "../../assets/perez2.png";
 import Perez3 from "../../assets/perez3.png";
 import Perez4 from "../../assets/perez4.png";
 import Perez5 from "../../assets/perez5.png";
+import { useNavigate } from "react-router-dom";
 
 const { Title, Text } = Typography;
 
@@ -47,10 +48,11 @@ const listData = [
 ];
 
 function Museum() {
+  const navigate = useNavigate();
   return (
-    <Flex vertical className="miami-places-container">
-      <Flex vertical className="place-detail" gap={18}>
-        <Title level={1}>Top Destinations at "Miami"</Title>
+    <Flex vertical wrap className="miami-places-container">
+      <Flex wrap vertical className="place-detail" gap={18}>
+        <Title level={2}>Pérez Art Museum Miami</Title>
         <Flex
           gap={18}
           style={{
@@ -90,7 +92,12 @@ function Museum() {
             <img src={Perez5} alt="Image 5" />
           </div>
         </Flex>
-        <Flex className="detail-text" vertical style={{ textAlign: "center" }}>
+        <Flex
+          className="detail-text"
+          vertical
+          wrap
+          style={{ textAlign: "center" }}
+        >
           <Text>
             The Pérez Art Museum Miami —officially known as the Jorge M. Pérez
             Art Museum of Miami-Dade County—is a contemporary art museum that
@@ -110,7 +117,7 @@ function Museum() {
         </Flex>
       </Flex>
       <Flex vertical className="whats-included">
-        <Title>What’s included</Title>
+        <Title level={2}>What’s included</Title>
         <List
           itemLayout="horizontal"
           dataSource={listData}
@@ -142,7 +149,7 @@ function Museum() {
         />
       </Flex>
       <Flex vertical className="itinerary-schedule">
-        <Title>Itinerary Schedule</Title>
+        <Title level={2}>Itinerary Schedule</Title>
         <Flex
           vertical
           className="card-BookBtn"
@@ -226,7 +233,9 @@ function Museum() {
               />
             </Card>
           </Flex>
-          <Button className="explore-btn">Book Now</Button>
+          <Button className="explore-btn" onClick={() => navigate("/bookTour")}>
+            Book Now
+          </Button>
         </Flex>
       </Flex>
     </Flex>

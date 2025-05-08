@@ -6,9 +6,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
-  align-items: stretch;
+  /* align-items: stretch; */
   max-width: 1000px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   height: auto;
 }
 
