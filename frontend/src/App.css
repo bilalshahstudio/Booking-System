@@ -19,15 +19,18 @@ body {
   font-size: 18px;
   border-radius: 12px;
 }
+
 .explore-btn {
   color: #fff;
-  background-color: #f16b51;
+  background: #f16b51;
   border-color: #f16b51;
+  /* transition: all 0.3s ease; */
 }
 
 .explore-btn:hover {
-  color: #fff;
-  background-color: #84ce64;
+  color: #fff !important;
+  background: #f05435 !important;
+  /* transform: scale(1.2); */
 }
 
 .ant-btn {

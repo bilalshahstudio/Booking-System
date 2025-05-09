@@ -1,7 +1,6 @@
-
-import { Button, Card, Col, Row } from "antd";
+import { Button, Card, Col, Flex, Row } from "antd";
 import React, { useState } from "react";
-
+import "./CitiesCard.css";
 
 import museum from "../../assets/museum.png";
 import stadium from "../../assets/stadium.png";
@@ -10,9 +9,13 @@ import wharf from "../../assets/wharf.png";
 import tower from "../../assets/tower.png";
 import skyviews from "../../assets/skyviews.png";
 
-import { ClockCircleOutlined, DollarOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
-
+import {
+  ClockCircleOutlined,
+  DeleteOutlined,
+  DollarOutlined,
+} from "@ant-design/icons";
+import { useLocation, useNavigate } from "react-router-dom";
+import LandingPage2 from "../../pages/LandingPages/LandingPage2";
 
 const { Meta } = Card;
 
@@ -26,7 +29,6 @@ const cities = [
     price: "$50 - $200",
     duration: "3 Days",
     path: "museum",
-
   },
   {
     name: "Hard Rock Stadium",
@@ -37,7 +39,6 @@ const cities = [
     price: "$50 - $80",
     duration: "1 Day",
     path: "stadium",
-
   },
   {
     name: "Matheson Hammock Park",
@@ -48,7 +49,6 @@ const cities = [
     price: "$50 - $200",
     duration: "3 Days",
     path: "park",
-
   },
   {
     name: "The Wharf Miami",
@@ -59,7 +59,6 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "wharf",
-
   },
   {
     name: "Miami Tower",
@@ -70,7 +69,6 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "tower",
-
   },
   {
     name: "Skyviews Miami",
@@ -81,13 +79,15 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "skyviews",
-
   },
 ];
 
 function CitiesCard() {
-
+  const location = useLocation();
+  const allTours = location.pathname === "/allTours";
+  const MyTours = location.pathname === "/myTours";
   const navigate = useNavigate();
+
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (
@@ -96,10 +96,8 @@ function CitiesCard() {
         {cities.map((city, index) => (
           <Col key={index} xs={24} sm={12} md={8}>
             <Card
-
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
-
               hoverable
               cover={
                 <img
@@ -111,23 +109,38 @@ function CitiesCard() {
             >
               <Meta title={city.name} description={city.description} />
 
-              <div style={{ marginTop: 12 }}>
+              <div className="card-footer" style={{ marginTop: 12 }}>
                 {hoveredCard === index ? (
-                  <Button
-                    type="primary"
-                    block
-                    onClick={() => navigate(`/${city.path}`)}
-                  >
-                    View Details
-                  </Button>
+                  allTours ? (
+                    <Button
+                      type="primary"
+                      block
+                      className="explore-btn"
+                      onClick={() => navigate(`/${city.path}`)}
+                    >
+                      View Details
+                    </Button>
+                  ) : (
+                    <Flex gap={8}>
+                      <DeleteOutlined className="delete-icon" />
+                      <Button
+                        onClick={() => navigate(`/${city.path}`)}
+                        className="explore-btn"
+                      >
+                        Details
+                      </Button>
+                      <Button className="explore-btn">Update</Button>
+                    </Flex>
+                  )
                 ) : (
                   <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      fontSize: 14,
-                      color: "rgba(0, 0, 0, 0.65)",
-                    }}
+                    className="card-detail-section"
+                    // style={{
+                    //   display: "flex",
+                    //   justifyContent: "space-between",
+                    //   fontSize: 14,
+                    //   color: "rgba(0, 0, 0, 0.65)",
+                    // }}
                   >
                     <span>
                       <DollarOutlined style={{ marginRight: 6 }} />
@@ -140,7 +153,6 @@ function CitiesCard() {
                   </div>
                 )}
               </div>
-
             </Card>
           </Col>
         ))}

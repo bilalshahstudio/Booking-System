@@ -1,0 +1,26 @@
+.delete-icon {
+  color: #f16b51;
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+.card-detail-section {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.65);
+  width: 100%;
+}
+
+.card-footer {
+  margin-top: 12px;
+  min-height: 48px; /* Reserve space to prevent height jump */
+  /* display: flex; */
+  align-items: center;
+  /* transition: all 0.3s ease-in-out; */
+}
