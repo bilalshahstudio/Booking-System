@@ -22,6 +22,13 @@ body {
 
 .explore-btn {
   color: #fff;
+  background-color: #f16b51;
+  border-color: #f16b51;
+}
+
+.explore-btn:hover {
+
+  color: #fff;
   background: #f16b51;
   border-color: #f16b51;
   /* transition: all 0.3s ease; */
@@ -41,7 +48,7 @@ body {
     color: #0000;
   }
 }
-/* 
+
 h1 {
   font-size: 50px;
 }
@@ -49,7 +56,22 @@ h1 {
 p {
   width: 578px;
   size: 24px;
-} */
+
+
+.booking-form {
+  margin-block: 50px;
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px;
+  /* @media (max-width: 600px) {
+    flex-direction: column;
+    margin-block: 20px;
+    padding: 20px;
+    width: 70%;
+  } */
+}
+
 
 .ant-select-single {
   border: #d9d9d9 !important;

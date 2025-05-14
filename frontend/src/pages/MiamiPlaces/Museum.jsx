@@ -1,3 +1,4 @@
+
 import "./MiamiPlaces.css";
 import {
   CheckCircleOutlined,
@@ -240,6 +241,7 @@ function Museum() {
       </Flex>
     </Flex>
   );
+
 }
 
 export default Museum;

@@ -1,6 +1,8 @@
+
 import { Button, Card, Col, Flex, Row } from "antd";
 import React, { useState } from "react";
 import "./CitiesCard.css";
+
 
 import museum from "../../assets/museum.png";
 import stadium from "../../assets/stadium.png";
@@ -17,6 +19,7 @@ import {
 import { useLocation, useNavigate } from "react-router-dom";
 import LandingPage2 from "../../pages/LandingPages/LandingPage2";
 
+
 const { Meta } = Card;
 
 const cities = [
@@ -29,6 +32,7 @@ const cities = [
     price: "$50 - $200",
     duration: "3 Days",
     path: "museum",
+
   },
   {
     name: "Hard Rock Stadium",
@@ -39,6 +43,7 @@ const cities = [
     price: "$50 - $80",
     duration: "1 Day",
     path: "stadium",
+
   },
   {
     name: "Matheson Hammock Park",
@@ -49,6 +54,7 @@ const cities = [
     price: "$50 - $200",
     duration: "3 Days",
     path: "park",
+
   },
   {
     name: "The Wharf Miami",
@@ -59,6 +65,7 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "wharf",
+
   },
   {
     name: "Miami Tower",
@@ -69,6 +76,7 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "tower",
+
   },
   {
     name: "Skyviews Miami",
@@ -79,10 +87,12 @@ const cities = [
     price: "$50 - $200",
     duration: "2 Days",
     path: "skyviews",
+
   },
 ];
 
 function CitiesCard() {
+
   const location = useLocation();
   const allTours = location.pathname === "/allTours";
   const MyTours = location.pathname === "/myTours";
@@ -96,8 +106,10 @@ function CitiesCard() {
         {cities.map((city, index) => (
           <Col key={index} xs={24} sm={12} md={8}>
             <Card
+
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
+
               hoverable
               cover={
                 <img
@@ -141,6 +153,7 @@ function CitiesCard() {
                     //   fontSize: 14,
                     //   color: "rgba(0, 0, 0, 0.65)",
                     // }}
+
                   >
                     <span>
                       <DollarOutlined style={{ marginRight: 6 }} />
@@ -153,6 +166,7 @@ function CitiesCard() {
                   </div>
                 )}
               </div>
+
             </Card>
           </Col>
         ))}

@@ -1,7 +1,9 @@
 import React from "react";
 import "../../App.css";
 import "./LandingPages.css";
+
 import { Button, Flex, Row, Col, Typography } from "antd";
+
 import image1 from "../../assets/1.png";
 import image2 from "../../assets/3.png";
 import image3 from "../../assets/2.png";
