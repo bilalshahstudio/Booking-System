@@ -1,29 +1,111 @@
 /* Landing Page 1 Styles */
+
+/* Vectors styling and position */
+
+.landing-container {
+  position: relative;
+  overflow: hidden;
+  /* padding: 100px 40px; */
+  background-color: #fff;
+}
+
+.vector-left {
+  position: absolute;
+  top: 265px;
+  bottom: 0;
+  left: 58px;
+  width: 234px;
+  z-index: 0;
+}
+
+.vector-right-rect {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 901px;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.vector-right-twist {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 520px;
+  z-index: 1;
+}
+
+/* Content and Text Section */
+
+.landing-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 164px;
+  padding-left: 60px;
+}
+
+.text-section {
+  max-width: 50%;
+}
+
+.landing-title {
+  font-size: 64px;
+  font-weight: 600;
+  color: #202445;
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 24px;
+  color: #303030;
+  font-weight: 400;
+  max-width: 75%;
+}
+
 .image-layout-container {
-  max-width: 463px;
-  margin-top: 63px;
-  padding: 16px;
+  width: 100%;
+  /* padding: 16px; */
+  margin-top: 190px;
 }
 
 .image-row {
-  height: 500px;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.short-image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .image-wrapper {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
   overflow: hidden;
   border-radius: 16px;
-  margin-bottom: 16px;
 }
 
 .tall-image {
-  height: 80%;
+  /* height: 100%;
+   */
+  /* width: 331px; */
+  width: 100%;
+  height: 556px;
 }
 
 .short-image {
-  height: calc(40% - 8px); /* 8px to account for gutter spacing */
+  /* height: 50%;
+  margin-bottom: 16px; */
+  /* width: 330px; */
+  width: 100%;
+  height: 266px;
 }
+/* 
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 16px;
+} */
 
 .image-wrapper img {
   width: 100%;
@@ -31,6 +113,11 @@
   object-fit: cover;
   display: block;
   border-radius: 16px;
+  /* width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px; */
 }
 
 /* Landing Page 2 styles */
@@ -38,7 +125,7 @@
   background-image: url("../../assets/4.png");
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  height: 82vh;
   padding-top: 60px;
   padding-inline: 2rem;
   position: relative;

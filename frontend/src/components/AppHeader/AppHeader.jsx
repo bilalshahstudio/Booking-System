@@ -7,6 +7,7 @@ import logo from "../../assets/tblogo.png";
 
 function AppHeader() {
   const location = useLocation();
+  const isLandingPage1 = location.pathname === "/";
   const isLandingPage2 = location.pathname === "/landingPage2";
   const navigate = useNavigate();
   return (
@@ -16,8 +17,8 @@ function AppHeader() {
       justify="space-between"
       className="app-header"
       style={{
-        position: isLandingPage2 ? "absolute" : "relative",
-        background: isLandingPage2 ? "transparent" : "#fff",
+        position: isLandingPage2 || isLandingPage1 ? "absolute" : "relative",
+        background: isLandingPage2 || isLandingPage1 ? "transparent" : "#fff",
       }}
     >
       <Flex align="center" wrap>

@@ -19,7 +19,13 @@ function DashboardLayout() {
       > */}
       <AppHeader />
       {/* </Header> */}
-      <Content style={{ background: "#fff" }}>
+      <Content
+        style={{
+          background: "#fff",
+          // paddingTop: "64px",
+          // paddingLeft: "64px",
+        }}
+      >
         <Outlet />
       </Content>
     </Layout>

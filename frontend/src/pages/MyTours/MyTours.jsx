@@ -6,7 +6,10 @@ import CitiesCard from "../../components/CitiesCard/CitiesCard";
 
 function MyTours() {
   return (
-    <Flex vertical style={{ paddingTop: "187px", paddingInline: "30px" }}>
+    <Flex
+      vertical
+      // style={{ paddingTop: "187px", paddingInline: "30px" }}
+    >
       <Flex align="center" justify="space-between">
         <Typography.Title level={1}>My Tours</Typography.Title>
       </Flex>
