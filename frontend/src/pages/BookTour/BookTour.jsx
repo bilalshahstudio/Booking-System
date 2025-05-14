@@ -1,4 +1,6 @@
-import "../../App.css"
+import "../../App.css";
+import "./BookTour.css";
+import BookingImage from "../../assets/booking.png";
 import {
   Button,
   Flex,
@@ -20,11 +22,13 @@ function BookTour() {
     </Form.Item>
   );
   return (
-
-    <Flex align="center" justify="center" style={{width:"100%", paddingTop:"64px"}}>
-      <Flex className="booking-form" style={{width:"20%"}}>
-
-    
+    <Flex
+      align="center"
+      justify="center"
+      // style={{ width: "100%", paddingTop: "64px" }}
+      className="booking-container"
+    >
+      <Flex className="form-section" style={{ width: "50%" }}>
         <Form
           name="booking"
           labelCol={{
@@ -94,14 +98,17 @@ function BookTour() {
             </Select>
           </Form.Item>
           <Form.Item>
-
-            <Button block htmlType="submit">
-
+            <Button block htmlType="submit" className="explore-btn">
               Confirm
             </Button>
           </Form.Item>
         </Form>
       </Flex>
+      {/* <Flex> */}
+      <div className="image-section">
+        <img src={BookingImage} alt="booking-image" />
+      </div>
+      {/* </Flex> */}
     </Flex>
   );
 }

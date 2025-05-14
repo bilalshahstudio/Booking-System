@@ -3,11 +3,14 @@ import "./App.css";
 import "./index.css";
 import { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import DashboardLayout from "./pages/DashboardLayout/DashboardLayout";
 // import AppHeader from './components/AppHeader/AppHeader'
 // import Dashboard from './pages/Dashboard/Dashboard'
 
-const AppHeader = lazy(() => import("./components/AppHeader/AppHeader"));
-// const Dashboard = lazy(() => import("./pages/Dashboard/Dashboard"));
+// const AppHeader = lazy(() => import("./components/AppHeader/AppHeader"));
+const DashboardLayout = lazy(() =>
+  import("./pages/DashboardLayout/DashboardLayout")
+);
 const BookTour = lazy(() => import("./pages/BookTour/BookTour"));
 const MyTours = lazy(() => import("./pages/MyTours/MyTours"));
 const AllTours = lazy(() => import("./pages/Tours/AllTours"));
@@ -36,26 +39,30 @@ function App() {
       }}
     >
       <Router>
-        <AppHeader />
+
         <Routes>
+          {/* <AppHeader /> */}
           {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-          <Route path="/landingPage2" element={<LandingPage2 />} />
-          <Route path="/" element={<LandingPage1 />} />
-          <Route path="/allTours" element={<AllTours />} />
-          <Route path="/bookTour" element={<BookTour />} />
-          <Route path="/myTours" element={<MyTours />} />
-          <Route path="/Istanbul" element={<Istanbul />} />
-          <Route path="/Dubai" element={<Dubai />} />
-          <Route path="/Miami" element={<Miami />} />
-          <Route path="/Chicago" element={<Chicago />} />
-          <Route path="/Dallas" element={<Dallas />} />
-          <Route path="/Ankara" element={<Ankara />} />
-          <Route path="/Museum" element={<Museum />} />
-          <Route path="/Park" element={<Park />} />
-          <Route path="/Skyviews" element={<Skyviews />} />
-          <Route path="/Stadium" element={<Stadium />} />
-          <Route path="/Tower" element={<Tower />} />
-          <Route path="/Wharf" element={<Wharf />} />
+          <Route path="/" element={<DashboardLayout />}>
+            <Route index element={<LandingPage1 />} />
+            <Route path="/landingPage2" element={<LandingPage2 />} />
+            <Route path="/allTours" element={<AllTours />} />
+            <Route path="/bookTour" element={<BookTour />} />
+            <Route path="/myTours" element={<MyTours />} />
+            <Route path="/Istanbul" element={<Istanbul />} />
+            <Route path="/Dubai" element={<Dubai />} />
+            <Route path="/Miami" element={<Miami />} />
+            <Route path="/Chicago" element={<Chicago />} />
+            <Route path="/Dallas" element={<Dallas />} />
+            <Route path="/Ankara" element={<Ankara />} />
+            <Route path="/Museum" element={<Museum />} />
+            <Route path="/Park" element={<Park />} />
+            <Route path="/Skyviews" element={<Skyviews />} />
+            <Route path="/Stadium" element={<Stadium />} />
+            <Route path="/Tower" element={<Tower />} />
+            <Route path="/Wharf" element={<Wharf />} />
+          </Route>
+
         </Routes>
       </Router>
     </ConfigProvider>

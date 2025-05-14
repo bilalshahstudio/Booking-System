@@ -7,10 +7,11 @@
   font-family: "Poppins", sans-serif;
   /* padding-inline: 2rem; */
 }
-/* 
+
 body {
-  font-family: 'Poppins', sans-serif;
-} */
+  /* font-family: 'Poppins', sans-serif; */
+  margin: 0px;
+}
 
 .ant-btn {
   padding-block: 24px;
@@ -18,6 +19,7 @@ body {
   font-size: 18px;
   border-radius: 12px;
 }
+
 .explore-btn {
   color: #fff;
   background-color: #f16b51;
@@ -25,8 +27,17 @@ body {
 }
 
 .explore-btn:hover {
+
   color: #fff;
-  background-color: #84ce64;
+  background: #f16b51;
+  border-color: #f16b51;
+  /* transition: all 0.3s ease; */
+}
+
+.explore-btn:hover {
+  color: #fff !important;
+  background: #f05435 !important;
+  /* transform: scale(1.2); */
 }
 
 .ant-btn {
@@ -45,7 +56,7 @@ h1 {
 p {
   width: 578px;
   size: 24px;
-}
+
 
 .booking-form {
   margin-block: 50px;
@@ -60,6 +71,7 @@ p {
     width: 70%;
   } */
 }
+
 
 .ant-select-single {
   border: #d9d9d9 !important;

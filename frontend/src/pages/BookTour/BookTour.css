@@ -1,0 +1,47 @@
+.booking-form {
+  /* margin-block: 50px; */
+  /* background-color: #fff; */
+  /* padding: 60px; */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 4px 10px 4px; */
+  /* @media (max-width: 600px) {
+    flex-direction: column;
+    margin-block: 20px;
+    padding: 20px;
+    width: 70%;
+  } */
+}
+
+.booking-container {
+  display: flex;
+  height: 100vh;
+  max-width: 1200px;
+  /* margin: 0 auto; */
+  gap: 20px;
+  /* padding: 20px; */
+  /* box-sizing: border-box; */
+}
+
+.form-section,
+.image-section {
+  flex: 1;
+}
+
+.image-section {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 8px; */
+}
+
+.image-section {
+  /* Rectangle 91 */
+
+  /* position: absolute;
+  width: 718px;
+  height: 861px;
+  left: 794px;
+  top: 126px; */
+
+  /* background: url(image.png); */
+}

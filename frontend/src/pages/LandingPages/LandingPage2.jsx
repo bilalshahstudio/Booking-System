@@ -59,13 +59,9 @@ function LandingPage2() {
               gap={16}
               align="center"
               justify="space-between"
-              style={{
-                borderRadius: "12px",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                overflow: "hidden",
-                padding: "81px",
-                background: "#fff",
-              }}
+
+              className="overlay-inner"
+
             >
               {/* Location */}
               <div style={{ flex: 1, minWidth: "200px", textAlign: "center" }}>
@@ -78,6 +74,7 @@ function LandingPage2() {
                   allowClear
                   placeholder="Select location"
                   style={{ width: "100%" }}
+
                 >
                   <Select.Option value="miami">Miami</Select.Option>
                   <Select.Option value="florida">Florida</Select.Option>
@@ -149,19 +146,27 @@ function LandingPage2() {
                   alignSelf: "center",
                 }}
               />
+              <Button
+                // type="primary"
+                className="search-button"
+                icon={<SearchOutlined />}
+                // style={{ width: "100%" }}
+                // onClick={handleSearch}
+              />
 
               {/* Search Button */}
-              <div style={{ flex: 1, minWidth: "150px", textAlign: "center" }}>
-                <Button
-                  // type="primary"
-                  className="explore"
-                  icon={<SearchOutlined />}
-                  // style={{ width: "100%" }}
-                  // onClick={handleSearch}
-                >
-                  Search
-                </Button>
-              </div>
+              {/* <div
+                style={{
+                  flex: 1,
+                  minWidth: "150px",
+                  textAlign: "center",
+                  // width: "54px",
+                  // height: "87px",
+                }}
+              >
+                
+              </div> */}
+
             </Flex>
           </div>
         </section>
@@ -171,14 +176,20 @@ function LandingPage2() {
         vertical
         align="center"
         justify="center"
-        style={{
-          paddingTop: "80px",
-          width: "100%",
-          maxWidth: "944px",
-          marginLeft: "20%",
-        }}
+
+        style={
+          {
+            // paddingTop: "80px",
+            // width: "100%",
+            // maxWidth: "944px",
+            // marginLeft: "20%",
+          }
+        }
       >
-        <Title>Popular Search</Title>
+        <Flex>
+          <Title>Popular Search</Title>
+        </Flex>
+
         <Flex gap={8} justify="center" wrap>
           {items.map((cityName) => (
             <Button key={cityName} onClick={() => navigate(`/${cityName}`)}>

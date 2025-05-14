@@ -1,9 +1,21 @@
 .app-header {
-  position: fixed;
+
+  /* position: fixed; */
   padding-top: 14px;
-  padding-inline: 30px;
-  width: 95%;
+  padding-inline: 64px;
+  width: 100%;
   /* padding-inline: 30px; */
   z-index: 10;
-  background: transparent;
+  /* background: transparent; */
+}
+
+img {
+  width: 86px;
+}
+
+.header-link {
+  color: "#202445" !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+
 }
